@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+#Screenshot of how it looks like.
+
+
+![Screen Shot 2023-01-05 at 3 59 04 PM](https://user-images.githubusercontent.com/55414731/210879113-9fb527b9-9045-4250-98ca-ab15de174db4.png)
+
+![Screen Shot 2023-01-05 at 3 59 12 PM](https://user-images.githubusercontent.com/55414731/210879141-b328f395-be2e-47cd-a445-5cf382a63860.png)
+
+# Getting Started with Create React Input Form App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
