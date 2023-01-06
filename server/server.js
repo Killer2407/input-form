@@ -1,3 +1,6 @@
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config({ path: __dirname + './.env' })
+}
 const express = require("express");
 const app = express();
 const cors = require('cors');
@@ -61,8 +64,8 @@ app.post("/api/register", async (req, res) => {
 });
 
 app.get('/api/getById/:id', (req, res) => {
-    Athlete.find({_id: req.params.id }).then(users => {
-        res.status(200).json(users )
+    Athlete.find({ _id: req.params.id }).then(users => {
+        res.status(200).json(users)
 
     }).catch(err => {
         console.log('err')
@@ -90,12 +93,12 @@ app.put("/api/update/:id", async (req, res) => {
 
 });
 
-if(process.env.NODE_ENV=== 'production') {
+if (process.env.NODE_ENV === 'production') {
     const path = require('path');
 
     app.get('/', (req, res) => {
-        app.use(express.static(path.resolve(__dirname, 'client', 'build')))
-        res.sendFile(path.resolve(__dirname,'client','build', 'index.html'))
+        app.use(express.static(path.join(__dirname, '../client', 'build')))
+        res.sendFile(path.resolve(__dirname, '../client', 'build', 'index.html'))
     })
 }
 

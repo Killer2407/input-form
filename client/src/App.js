@@ -10,14 +10,16 @@ function App() {
 
   return (
     <div className="App">
-    <div>
-     <Navbar />
-     <Routes>
-       <Route exact path="/" element={<RecordList />} />
-       <Route path="/edit/:id" element={<Edit />} />
-       <Route path="/create" element={<Create />} />
-     </Routes>
-   </div>
+      <div>
+        <Navbar />
+
+        <Routes basename='/'>
+            <Route exact path="/" element={<RecordList />} />
+            <Route path="/edit/:id" element={<Edit />} />
+            <Route path="/create" element={<Create />} />
+        </Routes>
+
+      </div>
     </div>
   );
 }
