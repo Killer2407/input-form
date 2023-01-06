@@ -38,7 +38,7 @@ export default function RecordList() {
   // This method fetches the records from the database.
   useEffect(() => {
     async function getRecords() {
-      const response = await fetch(`http://localhost:4000/api/getAllAthlete`);
+      const response = await fetch(`https://demo-psi-gold.vercel.app/api/getAllAthlete`);
 
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
