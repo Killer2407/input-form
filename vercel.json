@@ -4,12 +4,18 @@
         {
             "src": "server/server.js",
             "use": "@now/node"
+        },
+        {
+            "src": "./client/build",
+            "use": "@vercel/static"
         }
     ],
-    "routes": [
+
+    "rewrites": [
         {
-            "src": "/(.*)",
-            "dest": "server/server.js"
+            "source": "/(.*)",
+            "destination": "server/server.js"
         }
     ]
 }
+
