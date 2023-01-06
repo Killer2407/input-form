@@ -93,13 +93,14 @@ app.put("/api/update/:id", async (req, res) => {
 
 });
 
-if (process.env.NODE_ENV === 'production') {
+// if (process.env.NODE_ENV === 'production') {
     const path = require('path');
 
     app.get('/', (req, res) => {
+        console.log('home')
         app.use(express.static(path.join(__dirname, '../client', 'build')))
         res.sendFile(path.join(__dirname, '../client', 'build', 'index.html'))
     })
-}
+// }
 
 app.listen(port, () => console.log("Node server listening on port " + port));
