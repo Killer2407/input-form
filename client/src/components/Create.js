@@ -42,7 +42,7 @@ function Create() {
         //When a post request is sent to the create URL, I will add a new record to the database
         const newData = { ...form };
 
-        await fetch("http://localhost:4000/api/register", {
+        await fetch("https://demo-psi-gold.vercel.app/api/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

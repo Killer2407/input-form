@@ -78,7 +78,7 @@ function Edit() {
         };
 
         // This will send a post request to update data in the database.
-        await fetch(`http://localhost:4000/api/update/${params.id}`, {
+        await fetch(`https://demo-psi-gold.vercel.app/api/update/${params.id}`, {
             method: "PUT",
             body: JSON.stringify(editedPortfolio),
             headers: {
